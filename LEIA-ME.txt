@@ -1,0 +1,9 @@
+HANGMAN (Symantec Game Pack, 1991) - recriação para navegador
+
+COMO JOGAR: abra o index.html (duplo clique) em qualquer navegador.
+Para instalar como app (PWA), hospede a pasta em um servidor https/localhost.
+
+Teclas: A-Z para escolher letras | F2 = novo jogo | clique na paleta também funciona.
+
+Palavras: src/palavras_ptbr.py contém as listas pt-BR (separadas por "|").
+Depois de editar, é só regenerar o data.js (script de build usado está descrito no chat).

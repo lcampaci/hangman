@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hangman — Jogo da Forca (recriação)</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icon-32.png">
+<meta name="theme-color" content="#c0c0c0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <div id="titlebar"><span class="sysbox">&#9660;</span><span id="title">Hangman</span></div>
+  <div id="menubar">
+    <div class="menu" data-menu="jogo"><span><u>J</u>ogo</span>
+      <div class="drop">
+        <button data-cmd="novo"><span><u>N</u>ovo</span><em>F2</em></button>
+        <button data-cmd="categorias"><span><u>C</u>ategorias...</span></button>
+        <button data-cmd="paleta" id="mi-paleta"><span><u>E</u>xibir Paleta de Letras</span></button>
+        <button data-cmd="cor" id="mi-cor"><span>C<u>o</u>r</span></button>
+        <hr>
+        <button data-cmd="sair"><span>Sai<u>r</u></span></button>
+      </div>
+    </div>
+    <div class="menu" data-menu="nivel"><span><u>N</u>ível</span>
+      <div class="drop">
+        <button data-cmd="single" id="mi-single"><span><u>P</u>uzzle Único</span></button>
+        <button data-cmd="multi" id="mi-multi"><span>Puzzles <u>M</u>últiplos</span></button>
+      </div>
+    </div>
+    <div class="menu" data-menu="ajuda"><span>A<u>j</u>uda</span>
+      <div class="drop">
+        <button data-cmd="ajuda1"><span>Instruções do <u>P</u>uzzle Único...</span></button>
+        <button data-cmd="ajuda2"><span>Instruções dos Puzzles <u>M</u>últiplos...</span></button>
+        <button data-cmd="quiz"><span>Quiz <u>P</u>op-up...</span></button>
+        <hr>
+        <button data-cmd="sobre"><span><u>S</u>obre o Hangman...</span></button>
+      </div>
+    </div>
+  </div>
+  <div id="stage"><canvas id="c" width="1600" height="1167" tabindex="0"></canvas></div>
+</div>
+
+<div id="overlay" hidden>
+  <div class="dialog" id="dlg" role="dialog" aria-modal="true">
+    <div class="dtitle" id="dlg-title"></div>
+    <div class="dbody" id="dlg-body"></div>
+    <div class="dbtns" id="dlg-btns"></div>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
